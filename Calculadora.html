@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="StyleCalculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="dKey">
+            <script>
+                var y = 1;
+                y++;
+            </script>
+        </div>
+        <div id="operacionRealizada">0</div>
+        <div id="txtResultado"></div>
+
+        <div class="fila">
+            <button class="tecla" onclick="valor('7')">7</button>
+            <button class="tecla" onclick="valor('8')">8</button>
+            <button class="tecla" onclick="valor('9')">9</button>
+            <button class="tecla" onclick="operador('+')">+</button>
+        </div>
+        <div class="fila">
+            <button class="tecla" onclick="valor('4')">4</button>
+            <button class="tecla" onclick="valor('5')">5</button>
+            <button class="tecla" onclick="valor('6')">6</button>
+            <button class="tecla" onclick="operador('-')">-</button>
+        </div>
+        <div class="fila">
+            <button class="tecla" onclick="valor('1')">1</button>
+            <button class="tecla" onclick="valor('2')">2</button>
+            <button class="tecla" onclick="valor('3')">3</button>
+            <button class="tecla" onclick="operador('*')">x</button>
+
+        </div>
+        <div class="fila">
+            <button class="tecla" onclick="limpiar('')">AC</button>
+            <button class="tecla" onclick="valor('0')">0</button>
+            <button class="tecla" onclick="calcular('=')">=</button>
+            <button class="tecla" onclick="operador('/')">/</button>
+        </div>
+        <div class="fila">
+            <button class="teclaClear" onclick="clearStorage()">Clear</button>
+            <button class="tecla" onclick="operador('.')">.</button>
+        </div>
+
+
+    </div>
+    <article class="history">
+        <table class="list" id="currentTable">
+            <thead>
+                <tr>
+                    <th>History</th>
+                </tr>
+            </thead>
+            <tbody id="carlulatorBody">
+
+            </tbody>
+        </table>
+    </article>
+    <script src="CalculatorStorage.js"></script>
+</body>
+
+</html>
